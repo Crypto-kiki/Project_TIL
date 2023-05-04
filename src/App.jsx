@@ -8,8 +8,8 @@ function App() {
   };
 
   return (
-    <div className="h-screen flex justify-between mx-auto min-w-[1500px]">
-      <div className="p-12 w-1/3 bg-[#aa54fc] h-screen text-gray-50 flex flex-col">
+    <div className="min-h-screen flex justify-between mx-auto min-w-[1500px]">
+      <div className="p-12 w-1/3 bg-[#aa54fc] text-gray-50 flex flex-col">
         <div className="text-4xl font-bold ">
           BlockChain School 3기
           <div className="mt-8">TIL Link</div>
