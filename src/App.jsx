@@ -9,15 +9,15 @@ function App() {
 
   return (
     <div className="min-h-screen flex justify-between mx-auto min-w-[1500px]">
-      <div className="p-12 w-1/3 bg-[#aa54fc] text-gray-50 flex flex-col">
+      <div className="p-12 w-1/3 bg-[#aa54fc] text-gray-50 flex flex-col justify-between">
         <div className="text-4xl font-bold ">
           BlockChain School 3기
           <div className="mt-8">TIL Link</div>
         </div>
         <div className="flex justify-center">
-          <img src={rotateImage()} className="h-96 w-96 mt-80" />
+          <img src={rotateImage()} className="h-96 w-96" />
         </div>
-        <div className="mt-20">
+        <div>
           <div>TIL 주소는 Notion 회고팀 별 작성해주신 주소입니다.</div>
           <div>TIL 주소를 작성해주시지 않은 분은 표시되지 않습니다.</div>
           <div className="mt-10">
