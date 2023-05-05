@@ -1,10 +1,10 @@
 import { useEffect, useState, useRouter } from "react";
 import GitHubCalendar from "react-github-calendar";
 import ReactTooltip from "react-tooltip";
-import { SiVelog } from "react-icons/si";
+import { SiVelog, SiGithub } from "react-icons/si";
 import axios from "axios";
 
-const List = ({ team, name, url, git }) => {
+const List = ({ team, name, url, git, gitName }) => {
   const [isMounted, setIsMounted] = useState(false);
   useEffect(() => {
     setIsMounted(true);
@@ -13,6 +13,8 @@ const List = ({ team, name, url, git }) => {
   useEffect(() => {
     gitValidation();
   }, []);
+
+  console.log(gitName);
 
   // 깃허브 아이디가 유효할 경우에만 true
   const [gitResult, setGitResult] = useState(false);
@@ -23,10 +25,11 @@ const List = ({ team, name, url, git }) => {
   /**
    * 깃허브 아이디가 유효한지 확인하는 함수
    */
+
   const gitValidation = async () => {
     try {
       await axios.get(
-        `https://github-contributions-api.jogruber.de/v4/${git}?y=last`
+        `https://github-contributions-api.jogruber.de/v4/${gitName}?y=last`
       );
       setGitResult(true);
     } catch (err) {
@@ -76,18 +79,32 @@ const List = ({ team, name, url, git }) => {
 
   return (
     <div className="mr-4 text-lg">
-      <div className="flex items-center">
+      <div className="flex items-center mb-4 font-bold">
         {name}
-        <SiVelog className="inline ml-3" />
+        <a
+          href={url}
+          target="_blank"
+          className="flex items-center justify-center"
+        >
+          <SiVelog className="inline ml-3" />
+        </a>
+        {gitName ? (
+          <a href={git} target="_blank">
+            <SiGithub className="ml-3" />
+          </a>
+        ) : null}
       </div>
+
       {!gitResultLoading && gitResult ? (
         <GitHubCalendar
-          username={git}
+          username={gitName}
           blockSize={12}
           transformData={selectLastHalfYear}
         ></GitHubCalendar>
       ) : (
-        <p>깃허브 아이디를 등록해주세요.</p>
+        <div className="text-sm border border-gray-400 h-20 flex justify-center items-center rounded-lg">
+          <p>깃허브 주소를 알려주세요😥</p>
+        </div>
       )}
     </div>
   );

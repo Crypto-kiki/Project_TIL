@@ -3,25 +3,25 @@
     "name": "고종우",
     "team": 1,
     "url": "https://velog.io/@joy_go",
-    "git": "Crypto-kiki"
+    "git": ""
   },
   {
     "name": "김가형",
     "team": 1,
     "url": "https://velog.io/@hyeonga",
-    "git": "Crypto-kiki"
+    "git": "https://github.com/hyeongga"
   },
   {
     "name": "이주열",
     "team": 1,
     "url": "https://velog.io/@meloncoder",
-    "git": "Crypto-kiki"
+    "git": ""
   },
   {
     "name": "이주혁",
     "team": 1,
     "url": "https://velog.io/@lmsmd00",
-    "git": "Crypto-kiki"
+    "git": ""
   },
   {
     "name": "김강현",
@@ -45,13 +45,13 @@
     "name": "권세명",
     "team": 3,
     "url": "https://velog.io/@3pkwon",
-    "git": ""
+    "git": "https://github.com/semkwon"
   },
   {
     "name": "박범진",
     "team": 3,
     "url": "https://velog.io/@bpark14",
-    "git": ""
+    "git": "https://github.com/ATTIPARK"
   },
   {
     "name": "안재호",
@@ -75,7 +75,7 @@
     "name": "김시온",
     "team": 5,
     "url": "https://www.notion.so/likelion-blockchain/59c1dc23f477492abd44ab9659d11fa6",
-    "git": ""
+    "git": "https://github.com/sionkimsion"
   },
   {
     "name": "박석훈",
@@ -99,7 +99,7 @@
     "name": "임형석",
     "team": 6,
     "url": "https://velog.io/@lmjgmm",
-    "git": ""
+    "git": "https://github.com/Errly223093"
   },
   {
     "name": "박성준",
@@ -117,7 +117,7 @@
     "name": "김백기",
     "team": 8,
     "url": "https://hing9-studying.tistory.com",
-    "git": ""
+    "git": "https://github.com/Crypto-kiki"
   },
   {
     "name": "신영규",
@@ -129,7 +129,7 @@
     "name": "하유민",
     "team": 8,
     "url": "https://velog.io/@merryoumin",
-    "git": ""
+    "git": "https://github.com/merryoumin"
   },
   {
     "name": "진현석",
@@ -153,7 +153,7 @@
     "name": "서재민",
     "team": 9,
     "url": "https://velog.io/@seo913",
-    "git": ""
+    "git": "https://github.com/seo913"
   },
   {
     "name": "김영도",
@@ -171,24 +171,24 @@
     "name": "이현진",
     "team": 11,
     "url": "https://velog.io/@lhjbg0821",
-    "git": ""
+    "git": "https://github.com/lhjbg0821"
   },
   {
     "name": "최주연",
     "team": 11,
     "url": "https://velog.io/@chlwndus1216",
-    "git": ""
+    "git": "https://github.com/Choi-jujuyeon"
   },
   {
     "name": "조성윤",
     "team": 11,
     "url": "https://velog.io/@hunterjoe98",
-    "git": ""
+    "git": "https://github.com/HunterJoe9"
   },
   {
     "name": "황재윤",
     "team": 12,
     "url": "https://velog.io/@9oodvibe5only",
-    "git": ""
+    "git": "https://github.com/WhiteNetSource"
   }
 ]
