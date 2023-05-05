@@ -14,8 +14,6 @@ const List = ({ team, name, url, git, gitName }) => {
     gitValidation();
   }, []);
 
-  console.log(gitName);
-
   // 깃허브 아이디가 유효할 경우에만 true
   const [gitResult, setGitResult] = useState(false);
 
