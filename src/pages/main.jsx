@@ -1,5 +1,6 @@
 import metadata from "../metadata.json";
 import List from "../components/list";
+import { useState } from "react";
 
 const Main = () => {
   const rotateImage = () => {
@@ -8,28 +9,43 @@ const Main = () => {
   };
 
   return (
-    <div className="min-h-screen flex justify-between mx-auto min-w-[1500px]">
-      <div className="p-12 w-1/4 bg-[#aa54fc] text-gray-50 flex flex-col">
-        <div className="text-4xl font-bold ">
-          블록체인 스쿨 3기
-          <div className="mt-8">TIL Link</div>
+    <div className="min-h-screen flex justify-between mx-auto min-w-[1500px] bg-gradient-to-r from-violet-500 to-fuchsia-400">
+      <div className="p-12 w-1/4  text-gray-50 flex flex-col">
+        <div>
+          <div className="text-5xl font-bold tracking-widest">TECHIT</div>
+          <div className="mt-8 text-4xl">블록체인 스쿨 3기</div>
         </div>
         <div className="mt-20">
-          <img src={rotateImage()} className="h-96 w-96" />
+          <img src={rotateImage()} className="h-96 w-96 rounded-2xl" />
         </div>
         <div className="mt-20">
           <div>
             Velog 주소는 블록체인스쿨 3기 Notion에 작성하신 주소를 참고했습니다.
           </div>
           <div>작성하지 않으신 분은 표시되지 않습니다.</div>
+          <div className="mt-10">이후 등록은 디스코드 DM 보내주세요😀</div>
           <div className="mt-10">
-            공유를 원하시거나, 원하시지 않은 분은 DM 보내주세요😀
+            <div className="text-center">Update</div>
+            <div className="text-sm">
+              <p>2023. 05. 06</p>
+              <ul className="text-xs">
+                <li>1. Main Page 추가</li>
+                <li>2. Github 잔디 시각화 (최근 5개월만)</li>
+                <li>3. UI 개선</li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
       <div className="w-3/4 p-10">
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 1팀</div>
+        {/* 이 부분에 검색기능 추가하고 싶음
+        <input
+          type="text"
+          placeholder="이름으로 검색"
+          className="w-full rounded-md py-2 px-3 border border-gray-300 focus:outline-none focus:border-indigo-500"
+        /> */}
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 1팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 1 ? (
@@ -45,8 +61,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 2팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 2팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 2 ? (
@@ -62,8 +78,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 3팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 3팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 3 ? (
@@ -79,8 +95,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 4팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 4팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 4 ? (
@@ -96,8 +112,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 5팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 5팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 5 ? (
@@ -113,8 +129,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 6팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 6팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 6 ? (
@@ -130,8 +146,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 7팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 7팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 7 ? (
@@ -147,8 +163,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 8팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 8팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 8 ? (
@@ -164,8 +180,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 9팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 9팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 9 ? (
@@ -181,8 +197,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 10팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 10팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 10 ? (
@@ -198,8 +214,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 11팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 11팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 11 ? (
@@ -215,8 +231,8 @@ const Main = () => {
             )}
           </div>
         </div>
-        <div className="mb-16 border-b-4">
-          <div className="text-2xl font-bold pb-2 text-gray-500">회고 12팀</div>
+        <div className="mb-16 border-b-2">
+          <div className="text-2xl font-bold pb-2 text-black">회고 12팀</div>
           <div className="mb-4 grid grid-cols-3 gap-10">
             {metadata.map((v, i) =>
               v.team === 12 ? (

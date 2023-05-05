@@ -79,18 +79,18 @@ const List = ({ team, name, url, git, gitName }) => {
 
   return (
     <div className="mr-4 text-lg">
-      <div className="flex items-center mb-4 font-bold">
+      <div className="flex items-center mb-4 font-bold text-gray-200">
         {name}
         <a
           href={url}
           target="_blank"
           className="flex items-center justify-center"
         >
-          <SiVelog className="inline ml-3" />
+          <SiVelog className="inline ml-3 text-gray-700" />
         </a>
         {gitName ? (
           <a href={git} target="_blank">
-            <SiGithub className="ml-3" />
+            <SiGithub className="ml-3 text-gray-700" />
           </a>
         ) : null}
       </div>
@@ -102,7 +102,7 @@ const List = ({ team, name, url, git, gitName }) => {
           transformData={selectLastHalfYear}
         ></GitHubCalendar>
       ) : (
-        <div className="text-sm border border-gray-400 h-20 flex justify-center items-center rounded-lg">
+        <div className="text-sm border border-gray-700 h-20 flex justify-center items-center rounded-lg">
           <p>깃허브 주소를 알려주세요😥</p>
         </div>
       )}
