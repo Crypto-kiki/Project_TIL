@@ -32,6 +32,7 @@ const Main = () => {
                 <li>1. Main Page 추가</li>
                 <li>2. Github 잔디 시각화 (최근 5개월만)</li>
                 <li>3. UI 개선</li>
+                <li>4. title & favicon 변경</li>
               </ul>
             </div>
           </div>
