@@ -14,7 +14,7 @@ Velog and Github addresses of the 3rd Blockchain School members. [BCS 3rd](https
 
 ### `2023. 05. 06`
 
-Added Main page
-Visualized Github grass
-Improved UI
+Added Main page  
+Visualized Github grass  
+Improved UI  
 Changed Title and Favicon
