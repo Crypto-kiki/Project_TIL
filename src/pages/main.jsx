@@ -45,7 +45,7 @@ const Main = () => {
           <div>작성하지 않으신 분은 표시되지 않습니다.</div>
           <div className="mt-10">이후 등록은 디스코드 DM 보내주세요😀</div>
           <div className="mt-10">
-            <div className="text-center">Update</div>
+            <div className="text-center text-lg">Update</div>
             <div className="text-sm">
               <p>2023. 05. 06</p>
               <ul className="text-xs">
@@ -54,6 +54,14 @@ const Main = () => {
                 <li>3. UI 개선</li>
                 <li>4. title & favicon 변경</li>
               </ul>
+              <div className="mt-20">
+                <p className="text-lg">onGoing</p>
+                <ul className="text-xs">
+                  <li>1. 지갑연결 및 출석체크</li>
+                  <li>2. 출석체크 토큰 지급</li>
+                  <li>3. 토큰 Raffle</li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
