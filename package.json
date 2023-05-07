@@ -43,11 +43,8 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-<<<<<<< HEAD
   },
   "devDependencies": {
     "web3": "^1.9.0"
-=======
->>>>>>> 6da0288f1a80a564c1c04d9b8d6c492d9bb1b8de
   }
 }
