@@ -1,10 +1,18 @@
 import metadata from "../metadata.json";
 import List from "../components/list";
 import Web3 from "web3";
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import {
+  CONTRACT_ABI,
+  CONTRACT_ADDRESS,
+  TOKEN_ABI,
+  TOKEN_CONTRACT,
+} from "../web3.config";
 
 const Main = () => {
   const [account, setAccount] = useState();
+  const [countAttendance, setCountAttendance] = useState();
+  const [countCoin, setCountCoin] = useState();
 
   const rotateImage = () => {
     const ranNum = Math.floor(Math.random() * 4) + 1;
@@ -12,6 +20,21 @@ const Main = () => {
   };
 
   const web3 = new Web3(window.ethereum);
+  const contract = new web3.eth.Contract(CONTRACT_ABI, CONTRACT_ADDRESS);
+  const token = new web3.eth.Contract(TOKEN_ABI, TOKEN_CONTRACT);
+
+  const Attendance = async () => {
+    const Check_Attendance = await contract.methods
+      .Check_Attendance()
+      .send({ from: account });
+  };
+
+  const checkAttendance = async () => {
+    const attendance = await contract.methods.getAttendance(account).call();
+    setCountAttendance(attendance);
+
+    const checkCoin = await token.methods.balanceOf(account).call();
+  };
 
   const onClickAccount = async () => {
     try {
@@ -27,6 +50,11 @@ const Main = () => {
   const onClickLogOut = () => {
     setAccount("");
   };
+
+  useEffect(() => {
+    Attendance();
+    checkAttendance();
+  }, [account]);
 
   return (
     <div className="min-h-screen flex justify-between mx-auto min-w-[1500px] bg-gradient-to-r from-violet-500 to-fuchsia-400">
@@ -69,13 +97,22 @@ const Main = () => {
       <div className="w-3/4 p-10">
         <div className="flex justify-end">
           {account ? (
-            <button
-              onClick={onClickLogOut}
-              className="border border-gray-600 text-gray600 px-4 py-2 rounded-xl"
-            >
-              {account.substring(0, 4)}...
-              {account.substring(account.length - 4)}
-            </button>
+            <div className="flex items-center justify-center">
+              <div>테스트중......출석: {countAttendance} 회</div>
+              <button
+                onClick={Attendance}
+                className="mx-4 px-4 py-2 bg-yellow-100 rounded-xl"
+              >
+                출석체크
+              </button>
+              <button
+                onClick={onClickLogOut}
+                className="border border-gray-600 text-gray600 px-4 py-2 rounded-xl"
+              >
+                {account.substring(0, 4)}...
+                {account.substring(account.length - 4)}
+              </button>
+            </div>
           ) : (
             <button
               onClick={onClickAccount}
