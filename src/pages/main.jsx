@@ -34,6 +34,7 @@ const Main = () => {
     setCountAttendance(attendance);
 
     const checkCoin = await token.methods.balanceOf(account).call();
+    setCountCoin(checkCoin);
   };
 
   const onClickAccount = async () => {
@@ -98,7 +99,12 @@ const Main = () => {
         <div className="flex justify-end">
           {account ? (
             <div className="flex items-center justify-center">
-              <div>테스트중......출석: {countAttendance} 회</div>
+              <div className="mr-4 font-bold text-red-600">테스트중....</div>
+              <div>
+                BCS3 Token Contract : 0xd985FFC9d7Ced6c3A0fF0D36509fEAfdD09B08A1
+              </div>
+              <div className="mx-4">BCS3: {countCoin / 10 ** 18} 개</div>
+              <div>출석: {countAttendance} 회</div>
               <button
                 onClick={Attendance}
                 className="mx-4 px-4 py-2 bg-yellow-100 rounded-xl"
